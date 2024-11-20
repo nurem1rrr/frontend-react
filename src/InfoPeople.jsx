@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function InfoPeople() {
+  const [message, setMessage] = useState("");
+
+  const handleClick = () => {
+    setMessage("над кнопкой");
+  };
+
   return (
     <div>
       <h1>Информация о человеке</h1>
@@ -10,9 +16,11 @@ function InfoPeople() {
       <p>Возраст: 20</p>
       <p>Город: Бишкек</p>
       <p>Хобби: Учиться</p>
-      <button>Кнопка</button>
+      {message && <p>{message}</p>}
+      <button onClick={handleClick}>Кнопка</button>
     </div>
   );
 }
 
 export default InfoPeople;
+
