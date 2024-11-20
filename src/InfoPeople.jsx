@@ -17,7 +17,7 @@ function InfoPeople() {
       <p>Город: Бишкек</p>
       <p>Хобби: Учиться</p>
       {message && <p>{message}</p>}
-      <button onClick={handleClick}>Кнопка</button>
+      <button onClick={handleClick}>Повысить в должности</button>
     </div>
   );
 }
